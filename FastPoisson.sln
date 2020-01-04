@@ -3,7 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.29613.14
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastPoisson", "FastPoisson\FastPoisson.csproj", "{74C1A5ED-953E-4773-A783-16BA9ED67924}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FastPoisson", "FastPoisson\FastPoisson.csproj", "{74C1A5ED-953E-4773-A783-16BA9ED67924}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastPoisson.CLI", "FastPoisson.CLI\FastPoisson.CLI.csproj", "{7A06E9A5-5F98-4EE6-A61F-74EF52817DE4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FastPoisson.Tests", "FastPoisson.Tests\FastPoisson.Tests.csproj", "{6EE682AF-3280-434D-8919-C5907D4A1A66}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +19,14 @@ Global
 		{74C1A5ED-953E-4773-A783-16BA9ED67924}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{74C1A5ED-953E-4773-A783-16BA9ED67924}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{74C1A5ED-953E-4773-A783-16BA9ED67924}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A06E9A5-5F98-4EE6-A61F-74EF52817DE4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A06E9A5-5F98-4EE6-A61F-74EF52817DE4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A06E9A5-5F98-4EE6-A61F-74EF52817DE4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A06E9A5-5F98-4EE6-A61F-74EF52817DE4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6EE682AF-3280-434D-8919-C5907D4A1A66}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EE682AF-3280-434D-8919-C5907D4A1A66}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EE682AF-3280-434D-8919-C5907D4A1A66}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EE682AF-3280-434D-8919-C5907D4A1A66}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
