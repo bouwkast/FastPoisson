@@ -72,7 +72,7 @@ namespace FastPoisson
                     generatedSample.X = currentOrigin.X + direction.X;
                     generatedSample.Y = currentOrigin.Y + direction.Y;
 
-                    isValid = IsGeneratedSampleValid(generatedSample, width, height, radius, cellSize, activeSamples, accelerator);
+                    isValid = IsGeneratedSampleValid(generatedSample, width, height, radius, cellSize, samples, accelerator);
 
                     if (isValid)
                     {
@@ -94,7 +94,7 @@ namespace FastPoisson
             return samples;
         }
 
-        private static bool IsGeneratedSampleValid(Vector2 generatedSample, float width, float height, float radius, float cellSize, List<Vector2> activeSamples, int[,] accelerator)
+        private static bool IsGeneratedSampleValid(Vector2 generatedSample, float width, float height, float radius, float cellSize, List<Vector2> samples, int[,] accelerator)
         {
             // is our generated sample within our boundaries?
             if (generatedSample.X < 0 || generatedSample.X >= height || generatedSample.Y < 0 || generatedSample.Y >= width)
@@ -122,7 +122,7 @@ namespace FastPoisson
                     if (index >= 0) // in each point for the accelerator where we have a sample we put the current size of the number of samples
                     {
                         // compute Euclidean distance squared (more performant as there is no square root)
-                        float distance = Vector2.DistanceSquared(generatedSample, activeSamples[index]);
+                        float distance = Vector2.DistanceSquared(generatedSample, samples[index]);
                         if (distance < radius * radius)
                         {
                             return false; // too close to another point
