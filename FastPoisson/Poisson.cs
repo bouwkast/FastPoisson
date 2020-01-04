@@ -105,12 +105,14 @@ namespace FastPoisson
             int acceleratorX = (int)(generatedSample.X / cellSize);
             int acceleratorY = (int)(generatedSample.Y / cellSize);
 
+            // TODO - for some reason my math for initially have +/- 2 for the area bounds causes some points to just slip
+            //        through with a distance just below the radis - bumping this up to +/- 3 solves it at the cost of additional compute
             // create our search area bounds
-            int startX = Math.Max(0, acceleratorX - 2);
-            int endX = Math.Min(acceleratorX + 2, accelerator.GetLength(0) - 1);
+            int startX = Math.Max(0, acceleratorX - 3);
+            int endX = Math.Min(acceleratorX + 3, accelerator.GetLength(0) - 1);
 
-            int startY = Math.Max(0, acceleratorY - 2);
-            int endY = Math.Min(acceleratorY + 2, accelerator.GetLength(1) - 1);
+            int startY = Math.Max(0, acceleratorY - 3);
+            int endY = Math.Min(acceleratorY + 3, accelerator.GetLength(1) - 1);
 
             // search within our boundaries for another sample
             for (int x = startX; x <= endX; x++)
